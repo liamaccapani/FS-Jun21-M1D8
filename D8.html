@@ -23,16 +23,19 @@
       Write a function for changing the text of only the p which are children of a div.
       */
 
-      const changePcontent = function () {
-        //
+      const changePcontent = function (event) {
+        let changedP = document.querySelector('div p')
+        changedP.innerText = "I think I'm getting the hang of it"
       };
 
       /* EXERCISE 4
       Write a function for changing the destination of every link to https://www.google.com
       */
 
-      const changeUrls = function () {
-        //
+      const changeUrls = function (event) {
+        alternativeLink = document.querySelector('a')
+        alternativeLink.innerHTML = "https://www.google.com"
+        alternativeLink.innerText = "Here's the link for google!"
       };
 
       /* EXERCISE 5
@@ -96,6 +99,7 @@
 
       window.onload = function () {
         changeTitle("Henlo fren!")
+        changePcontent() // or button, see below
       };
 
       /* EXERCISE 13
@@ -132,9 +136,11 @@
       </ul>
 
       <a href="strive.school">This link goes to Strive School</a>
+      <button onclick="changeUrls(event)">click to google link</button>
 
       <div>
         <p>This text is just for the exercise</p>
+        <!-- <button onclick="changePcontent(event)">click me too!</button> -->
       </div>
 
       <div>
