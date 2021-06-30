@@ -24,7 +24,7 @@
       */
 
       const changePcontent = function (event) {
-        let changedP = document.querySelector('div p')
+        let changedP = document.querySelector('section p')
         changedP.innerText = "I think I'm getting the hang of it"
       };
 
@@ -104,6 +104,7 @@
       */
 
       window.onload = function () {
+        alert('Page succesfully loaded!')
         changeTitle("Henlo fren!")
         changePcontent() // or button, see below
         // addToTheSecond()
@@ -130,37 +131,37 @@
 
     <main>
       <hr />
+      <section>
+        <!-- <button onclick="paintItGreen(event)">Grrrreeeen</button> -->
+        <button onclick="firstUlDisappear(event)">Click me to make the ul disappear!</button>
+        <ul id="firstList">
+          <li>1st</li>
+          <li>2nd</li>
+          <li>3rd</li>
+        </ul>
+      
 
-      <!-- <button onclick="paintItGreen(event)">Grrrreeeen</button> -->
-      <button onclick="firstUlDisappear(event)">Click me to make the ul disappear!</button>
-      <ul id="firstList">
-        <li>1st</li>
-        <li>2nd</li>
-        <li>3rd</li>
-      </ul>
-    
+        <ul id="secondList">
+          <li>1st</li>
+          <li>2nd</li>
+          <li>3rd</li>
+        </ul>
 
-      <ul id="secondList">
-        <li>1st</li>
-        <li>2nd</li>
-        <li>3rd</li>
-      </ul>
-
-      <a href="strive.school">This link goes to Strive School</a>
-      <button onclick="changeUrls(event)">click to google link</button>
-
-      <div>
+        <a href="strive.school">This link goes to Strive School</a>
+        <button onclick="changeUrls(event)">click to google link</button>
+    </section>
+      <section>
         <p>This text is just for the exercise</p>
         <!-- <button onclick="changePcontent(event)">click me too!</button> -->
-      </div>
+      </section>
 
-      <div>
+      <section>
         <input
           type="text"
           id="input-field"
           placeholder="input field for the exercise"
         />
-      </div>
+      </section>
     </main>
 
     <footer>
