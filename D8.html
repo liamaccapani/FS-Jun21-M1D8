@@ -4,17 +4,19 @@
       /* EXERCISE 1
       Write a function for changing the title of the document in something else.
       */
-
+      
       const changeTitle = function (newTitle) {
-        //
+        document.title = newTitle
       };
+      
 
       /* EXERCISE 2
       Write a function for changing the class of the title of the page in "myHeading".
       */
 
-      const addClassToTitle = function () {
-        //
+      const addClassToTitle = function (event) {
+        let newClass = document.querySelector('h1')
+        newClass.classList.add("myHeading")
       };
 
       /* EXERCISE 3
@@ -93,7 +95,7 @@
       */
 
       window.onload = function () {
-        //
+        changeTitle("Henlo fren!")
       };
 
       /* EXERCISE 13
@@ -110,6 +112,7 @@
   <body>
     <header>
       <h1>This is the title of the page</h1>
+      <button onclick="addClassToTitle(event)">Click and see</button>
       <h2>This is the subtitle of the page</h2>
     </header>
 
