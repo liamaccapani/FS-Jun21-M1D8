@@ -35,16 +35,20 @@
       const changeUrls = function (event) {
         alternativeLink = document.querySelector('a')
         alternativeLink.innerHTML = "https://www.google.com"
-        alternativeLink.innerText = "Here's the link for google!"
+        alternativeLink.innerText = "Here's the link to google!"
       };
 
       /* EXERCISE 5
        Write a function for adding a new item in the second list.
        */
 
-      const addToTheSecond = function (content) {
-        //
-      };
+      // const addToTheSecond = function (content) {
+      //   let newItem = document.createElement('li')
+      //   newItem.innerText = content
+      //   let container = document.getElementsById('secondList')
+      //   container.appendChild('newItem')
+        
+      // };
 
       /* EXERCISE 6
       Write a function for adding a second paragraph to the div.
@@ -58,8 +62,9 @@
       Write a function for making the first UL disappear.
       */
 
-      const firstUlDisappear = function () {
-        //
+      const firstUlDisappear = function (event) {
+        removedUl = document.getElementById('firstList').remove()
+
       };
 
       /* EXERCISE 8
@@ -67,7 +72,8 @@
       */
 
       const paintItGreen = function () {
-        //
+        let coloredItems = document.querySelector('li')
+        coloredItems.style.backgroundColor = "green"
       };
 
       /* EXERCISE 9
@@ -100,6 +106,8 @@
       window.onload = function () {
         changeTitle("Henlo fren!")
         changePcontent() // or button, see below
+        // addToTheSecond()
+        paintItGreen()
       };
 
       /* EXERCISE 13
@@ -123,11 +131,14 @@
     <main>
       <hr />
 
+      <!-- <button onclick="paintItGreen(event)">Grrrreeeen</button> -->
+      <button onclick="firstUlDisappear(event)">Click me to make the ul disappear!</button>
       <ul id="firstList">
         <li>1st</li>
         <li>2nd</li>
         <li>3rd</li>
       </ul>
+    
 
       <ul id="secondList">
         <li>1st</li>
